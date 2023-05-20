@@ -1,0 +1,193 @@
+html {
+  background-color: #243240;
+  color: #fff;
+  font-family: 'FuturaRennerRegular';
+}
+
+/* Estilos para la navbar */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 22vh; /* Ancho de la navbar */
+  background-color: #243240;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar li {
+  margin-bottom: 10px;
+}
+
+.navbar a {
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #243240;
+  line-height: 8vh;
+} 
+.navbar a.active {
+  color: #fff; /* Cambia el color activo a tu preferencia */
+  background-color: #7c2e65; /* Cambia el fondo activo a tu preferencia */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
+}
+
+/* Estilos para el footer */
+.footer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 20vh; /* Ancho del footer */
+  background-color: #243240;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer li {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  padding: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 20%;
+  overflow: hidden;
+}
+
+.profile-overlay {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -25px; /* Ajusta el valor para determinar cuánto sobresale a la izquierda */
+  width: calc(100% + 20px); /* Ajusta el valor para el ancho del overlay */
+  height: 100%;
+  background-color: #7c2e65;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  z-index: -1;
+  border-radius: 20%;
+}
+
+/* Estilos para el contenido centrado */
+.center-content-home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-left: 22vh; /* Ancho de la navbar */
+  padding-right: 20vh; /* Ancho del footer */
+}
+.content-container {
+margin-left: 20px; /* Ajusta el margen izquierdo a "auto" para centrar horizontalmente */
+margin-right: auto; /* Ajusta el margen derecho según tus preferencias */
+text-align: center;
+}
+.highlight{
+  color: #7c2e65;
+  font-size: 17vh;
+  margin-right: 2.5vh;
+}
+.rectangle {
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 75%;
+height: 10vh;
+background-color: #243240;
+margin-top: 45px; /* Ajusta el valor según el espacio que desees entre el párrafo y el rectángulo */
+margin-left: 8vh;
+border-radius: 42px; /* Ajusta el valor para establecer los bordes redondeados */
+box-shadow: 0 0 0 1px white; /* Crea un borde blanco de 2px alrededor del div */
+position: relative; /* Añade esta propiedad para establecer el contexto de apilamiento */
+z-index: 1; /* Añade esta propiedad para asegurarte de que el rectángulo esté por encima de otros elementos */
+overflow: hidden;
+
+}
+.circle-button {
+  margin-left: auto; /* Ancla el botón a la derecha del contenedor */
+  margin-right: 3px; /* Espacio adicional entre el botón y el borde derecho del contenedor */
+}
+.rectangle a {
+  padding: 20px;
+  line-height: 8vh;
+  background-color: #7c2e65;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+} 
+.rectangle-text{
+  margin-left: 8vh;
+  font-size: 3vh;
+}
+.center-content-perfil{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-left: 22vh; /* Ancho de la navbar */
+  padding-right: 20vh; /* Ancho del footer */
+  }
+@media only screen and (min-width: 1200px) {
+  .navbar ul {
+    align-items: center;
+  }
+  .navbar a {
+    line-height: 6vh;
+  } 
+  .rectangle a {
+    padding: 20px;
+    line-height: 6vh;
+  } 
+  .rectangle-text{
+    margin-left: 8vh;
+    font-size: 3vh;
+  }
+  .center-content-home, .center-content {
+    padding-left: calc(22vh + 100px); /* Ajusta el valor para incluir el ancho de la navbar y el margen izquierdo */
+    padding-right: calc(20vh + 100px); /* Ajusta el valor para incluir el ancho del footer y el margen derecho */
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .center-content-home, .center-content {
+    padding-left: calc(25vh + 200px); /* Ajusta el valor para incluir el ancho de la navbar y el margen izquierdo */
+    padding-right: calc(25vh + 200px); /* Ajusta el valor para incluir el ancho del footer y el margen derecho */
+  }
+}
