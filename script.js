@@ -54,4 +54,45 @@ document.getElementById('circle-button').addEventListener('click', function(even
       behavior: 'smooth'
     });
   });
-  
+
+  //Envio de datos de Formulario
+function mostrarToast(){
+  M.toast({html:'Enviado correctamente'});
+}
+function saveContact(event) {
+  event.preventDefault(); // Previene el comportamiento predeterminado de envío del formulario
+
+  let nameContact = document.getElementById("name");
+  let emailContact = document.getElementById("email")
+  let subjectContact = document.getElementById("subject")
+  let messageContact = document.getElementById("message")
+
+  let contact = {
+    name: nameContact.value,
+    email: emailContact.value,
+    subject: subjectContact.value,
+    message: messageContact.value,
+  }
+  console.log(contact)
+
+  let url = "http://127.0.0.1:8000/api/formulario-contacto";
+
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(contact),
+  }).then(response => {
+    if (response.ok) {
+      mostrarToast();
+    console.log(response);
+    }
+  });
+}
+
+// Obtén el formulario por su ID o cualquier otro selector
+const form = document.getElementById('my-form');
+
+// Agrega un controlador de eventos para el evento "submit" del formulario
+form.addEventListener('submit', saveContact);

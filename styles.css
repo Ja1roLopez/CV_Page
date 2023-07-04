@@ -1,5 +1,5 @@
 html {
-  background-color: #243240;
+  background-color: #110916;
   color: #fff;
   font-family: 'FuturaRennerRegular';
 }
@@ -11,7 +11,7 @@ html {
   top: 0;
   height: 100vh;
   width: 22vh; /* Ancho de la navbar */
-  background-color: #243240;
+  background-color: #110916;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,13 +36,13 @@ html {
   padding: 20px;
   text-decoration: none;
   color: #fff;
-  background-color: #243240;
+  background-color: #110916;
   line-height: 8vh;
 } 
 .navbar a.active {
   color: #fff; /* Cambia el color activo a tu preferencia */
   background-color: #7c2e65; /* Cambia el fondo activo a tu preferencia */
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
 }
 
 /* Estilos para el footer */
@@ -52,7 +52,7 @@ html {
   top: 0;
   height: 100vh;
   width: 20vh; /* Ancho del footer */
-  background-color: #243240;
+  background-color: #110916;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -131,7 +131,7 @@ align-items: center;
 justify-content: space-between;
 width: 75%;
 height: 10vh;
-background-color: #243240;
+background-color: #110916;
 margin-top: 45px; /* Ajusta el valor según el espacio que desees entre el párrafo y el rectángulo */
 margin-left: 8vh;
 border-radius: 42px; /* Ajusta el valor para establecer los bordes redondeados */
@@ -149,7 +149,7 @@ overflow: hidden;
   padding: 20px;
   line-height: 8vh;
   background-color: #7c2e65;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
 } 
 .rectangle-text{
   margin-left: 8vh;
@@ -163,6 +163,31 @@ overflow: hidden;
   height: 100vh;
   padding-left: 22vh; /* Ancho de la navbar */
   padding-right: 20vh; /* Ancho del footer */
+  }
+  .send {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height: 10vh;
+    background-color: #110916;
+    margin-top: 45px; /* Ajusta el valor según el espacio que desees entre el párrafo y el rectángulo */
+    margin-left: 35%;
+    border-radius: 42px; /* Ajusta el valor para establecer los bordes redondeados */
+    box-shadow: 0 0 0 1px white; /* Crea un borde blanco de 2px alrededor del div */
+    position: relative; /* Añade esta propiedad para establecer el contexto de apilamiento */
+    z-index: 1; /* Añade esta propiedad para asegurarte de que el rectángulo esté por encima de otros elementos */
+    overflow: hidden;
+  }
+  .send a {
+    padding: 20px;
+    line-height: 8vh;
+    background-color: #7c2e65;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  } 
+  .send-text{
+    margin-left: 8vh;
+    font-size: 3vh;
   }
 @media only screen and (min-width: 1200px) {
   .navbar ul {

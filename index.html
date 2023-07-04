@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" type="text/css" href="/CV_Page/materialize/css/materialize.css">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/materialize/css/materialize.css">
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/futura-renner" type="text/css"/>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -22,7 +22,7 @@
           <div class="col s12 m4">
             <div class="profile-container">
               <div class="profile-image">
-                <img class="responsive-img" src="/CV_Page/img/Profile.png" alt="Imagen de perfil">
+                <img class="responsive-img" src="/img/Profile.png" alt="Imagen de perfil">
               </div>
               <div class="profile-overlay"></div>
             </div>
@@ -54,9 +54,37 @@
       <h4>Hola</h4>
       <p>Este es un párrafo de prueba</p>
     </div>
-    <div class="center-content-home white-text" id="contacto">
-      <h4>Hola</h4>
-      <p>Este es un párrafo de prueba</p>
+    <div class="center-content-perfil white-text" id="contacto">
+      <h4>Contacto</h4>
+      <div class="row" >
+        <form  class="col s12" id="my-form">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Nombre" id="name" type="text" class="validate">
+              <label for="name"></label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Correo" id="email" type="email" class="validate">
+              <label for="email"></label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="Asunto" id="subject" type="text" class="validate">
+              <label for="subject"></label>
+            </div>
+            <div class="input-field col s12">
+              <textarea placeholder="Tu mensaje" id="message" type="text" class="materialize-textarea"></textarea>
+              <label for="message"></label>
+            </div>
+            <div class="send">
+              <span class="send-text">Enviar Mensaje</span>
+              <div class="circle-button-container">
+                <button class="btn-floating btn-large waves-effect waves-light circle-button bx bx-send bx-md" id="circle-button" onclick="saveContact()"></button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div class="center-content-home white-text" id="blog">
       <h4>Hola</h4>
@@ -71,7 +99,7 @@
       </ul>
     </div>
   
-    <script src="/CV_Page/materialize/js/materialize.min.js"></script>
-    <script src="/CV_Page/script.js"></script>
+    <script src="/materialize/js/materialize.min.js"></script>
+    <script src="script.js"></script>
   </body>
   </html>
